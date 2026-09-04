@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Yrsa&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css.css">
+  <title>2nd Date</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Where do you want to Eat?</h1>
+
+    <div class="row">
+      <div class="col s12 m6 l6">
+        <label for="meal-searched">Cuisine Type</label>
+        <select class="browser-default" id="meal-searched">
+          <option value="" disabled selected>Choose your cuisine</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Filipino">Filipino</option>
+          <option value="Thai">Thai</option>
+          <option value="Vietnamese">Vietnamese</option>
+        </select>
+        <button class="btn waves-effect waves-light meal-selection" type="button">
+          Choose Cuisine
+        </button>
+      </div>
+
+      <div class="col s12 m6 l6">
+        <label for="place-selected">Place</label>
+        <select class="browser-default" id="place-selected" disabled>
+          <option value="" disabled selected>Choose a place</option>
+        </select>
+        <button class="btn waves-effect waves-light place-selection" type="button">
+          Choose Place
+        </button>
+      </div>
+
+      <div class="col s12 m6 l6">
+        <label for="cafe-selected">Cafe</label>
+        <select class="browser-default" id="cafe-selected">
+          <option value="" disabled selected>Choose your cafe</option>
+          <option value="fr-mgmt">FR MGMT</option>
+          <option value="saglit">Saglit</option>
+          <option value="majikasa">Majikasa</option>
+          <option value="koffle">Koffle</option>
+        </select>
+        <button class="btn waves-effect waves-light cafe-selection" type="button">
+          Choose Cafe
+        </button>
+      </div>
+
+      <div class="col s12 m6 l6">
+        <div class="date-card">
+          <div class="date-card-header">
+            <span class="date-icon">♡</span>
+            <div>
+              <h5>Pick Your Date</h5>
+              <p>Choose a day</p>
+            </div>
+          </div>
+
+          <label for="date-selected">DATE AVAILABLE</label>
+          <div class="date-input-wrap">
+            <span class="calendar-icon">📅</span>
+            <input type="date" id="date-selected" class="date-picker">
+          </div>
+
+          <div class="date-selected-display" id="date-message">
+            <span>✨</span>
+            <span>Select a date to continue</span>
+          </div>
+
+          <button type="button" id="clear-date" class="clear-date">
+            Clear Date
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row results-row">
+      <div class="col s12 m6 l6" id="meal-recipie"></div>
+      <div class="col s12 m6 l6" id="place-recipie"></div>
+      <div class="col s12" id="cafe-recipie"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

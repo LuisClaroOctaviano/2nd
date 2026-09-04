@@ -1,0 +1,329 @@
+body {
+  background: linear-gradient(-45deg, #4b1800, #6e002a, #186885, #275a34);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+  min-height: 100vh;
+}
+
+body, label, select, .btn {
+  font-family: "Yrsa", serif;
+}
+
+h1, label { color: white; }
+
+h1 { margin-top: 30px; }
+
+label, select {
+  font-size: large;
+  margin-bottom: 10px;
+}
+
+select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.col { margin-top: 10px; }
+
+.btn {
+  background-color: rgb(0, 84, 241);
+  margin-top: 10px;
+}
+
+.results-row { margin-top: 20px; }
+
+.card {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.recommendation-card .card-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-title {
+  color: black;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cuisine-tag {
+  display: inline-block;
+  background: #eee;
+  padding: 4px 9px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.description {
+  line-height: 1.5;
+  margin: 10px 0 15px;
+}
+
+.location {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+a { font-weight: bold; }
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 600px) {
+  .recommendation-card .card-image img { height: 240px; }
+}
+
+
+.date-picker {
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: "Yrsa", serif;
+  font-size: large;
+  margin-bottom: 5px;
+}
+
+.date-message {
+  color: white;
+  font-size: 1rem;
+  margin: 5px 0 0;
+}
+
+
+
+/* =========================
+   Creative Date Picker
+   ========================= */
+.date-card {
+  position: relative;
+  padding: 20px;
+  margin-top: 8px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+}
+
+.date-card::before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  top: -55px;
+  right: -25px;
+  background: rgba(255, 182, 193, 0.25);
+}
+
+.date-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.date-card-header h5 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.date-card-header p {
+  margin: 3px 0 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.date-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #f7d7df;
+  font-size: 25px;
+}
+
+.date-card label {
+  display: block;
+  color: #777;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.date-input-wrap {
+  display: flex;
+  align-items: center;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  background: white;
+  padding: 0 12px;
+  transition: 0.2s ease;
+}
+
+.date-input-wrap:focus-within {
+  border-color: #d99aaa;
+  box-shadow: 0 0 0 4px rgba(217, 154, 170, 0.12);
+}
+
+.calendar-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.date-picker {
+  width: 100%;
+  height: 48px;
+  border: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.date-selected-display {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  margin-top: 10px;
+  padding: 8px 11px;
+  border-radius: 10px;
+  background: #fff5f7;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.date-selected-display.has-date {
+  color: #8d4f61;
+  font-weight: 700;
+}
+
+.clear-date {
+  border: 0;
+  background: transparent;
+  color: #999;
+  padding: 7px 0 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.clear-date:hover {
+  color: #8d4f61;
+}
+
+/* =========================
+   Equal Recommendation Images
+   ========================= */
+#meal-recipie img,
+#cafe-recipie img {
+  width: 100% !important;
+  height: 260px !important;
+  min-height: 260px !important;
+  max-height: 260px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
+#meal-recipie .card,
+#cafe-recipie .card {
+  overflow: hidden;
+}
+
+#meal-recipie .card-image,
+#cafe-recipie .card-image {
+  height: 260px !important;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  #meal-recipie img,
+  #cafe-recipie img,
+  #meal-recipie .card-image,
+  #cafe-recipie .card-image {
+    height: 220px !important;
+    min-height: 220px !important;
+    max-height: 220px !important;
+  }
+}
+
+
+/* Compact date picker */
+.date-card {
+  padding: 14px 16px;
+  margin-top: 5px;
+  border-radius: 14px;
+}
+
+.date-card-header {
+  gap: 9px;
+  margin-bottom: 9px;
+}
+
+.date-card-header h5 {
+  font-size: 1.15rem;
+}
+
+.date-card-header p {
+  font-size: 0.78rem;
+  margin-top: 1px;
+}
+
+.date-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.date-card label {
+  font-size: 0.7rem;
+  margin-bottom: 3px;
+}
+
+.date-input-wrap {
+  padding: 0 9px;
+  border-radius: 9px;
+}
+
+.calendar-icon {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.date-picker {
+  height: 38px;
+  font-size: 0.9rem;
+}
+
+.date-selected-display {
+  min-height: 30px;
+  margin-top: 6px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+}
+
+.clear-date {
+  padding-top: 4px;
+  font-size: 0.72rem;
+}
